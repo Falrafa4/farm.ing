@@ -1,0 +1,131 @@
+/* GLOBAL STYLE */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root {
+    --primary: #214E3F;
+    --secondary: #F3FFFA;
+    --alternate: #E2FFF5;
+
+    --default-transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Nunito Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--secondary);
+    font-family: 'Nunito Sans', Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    padding: 0.75rem 3rem;
+    border-radius: 60px;
+    width: fit-content;
+    display: block;
+    transition: .3s var(--default-transition);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-dark {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 1px solid var(--primary);
+}
+
+.btn-crud-dark {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 1px solid var(--primary);
+    border-radius: 0.5rem !important;
+    padding: 0.75rem 1rem !important;
+}
+
+.btn-crud-dark:hover,
+.btn-dark:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.btn-light {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: 1px solid var(--secondary);
+}
+
+.btn-light:hover {
+    background-color: transparent;
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+
+.input-box input, 
+.input-box select {
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    outline: none;
+    border: 1px solid #999;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    font-size: 14px;
+}
+
+.input-box input:valid {
+    border: 1px solid var(--primary);
+}
+
+.input-box input::placeholder {
+    color: #828282;
+}
+
+/* MESSAGE */
+.message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-5rem);
+    opacity: 0;
+    transition: transform .3s, opacity .3s;
+    z-index: 3;
+}
+
+.message #message-close {
+    cursor: pointer;
+}
+
+.message.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.message.success {
+    background-color: #33A1E0;
+    color: var(--secondary);
+}
+
+.message.error {
+    background-color: #e03333;
+    color: var(--secondary);
+}
+
+.message.warning {
+    background-color: #e0cf33;
+    color: var(--secondary);
+}

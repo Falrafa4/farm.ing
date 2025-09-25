@@ -1,0 +1,77 @@
+/* STYLE FOR AUTH PAGE (LOGIN & REGIST) */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2dvh 10rem 0 5rem;
+    gap: 5rem;
+}
+
+section.left {
+    position: relative;
+}
+
+section.left h1 {
+    position: absolute;
+    z-index: 2;
+    color: var(--secondary);
+    top: 2rem;
+    left: 4rem;
+    font-size: 4rem;
+    width: 50%;
+    line-height: 110%;
+}
+
+main.register section.left h1 {
+    font-size: 5rem;
+}
+
+section.left .auth-bg {
+    position: relative;
+    height: 95dvh;
+}
+
+section.left .farmer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+}
+
+section.right {
+    width: 30%;
+    /* background-color: #999; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.right h1 {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 3rem;
+}
+
+section.right form {
+    width: 100%;
+}
+
+.link-group {
+    text-align: center;
+}
+
+.link-group .btn {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 14px;
+}
+
+.link-group p, .link-group a {
+    color: #828282;
+}
+
+.link-group a:hover {
+    text-decoration: underline;
+}

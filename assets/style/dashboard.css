@@ -1,0 +1,314 @@
+/* STYLE FOR DASHBOARD PAGE */
+main {
+    display: flex;
+}
+
+main h1 {
+    font-size: 3rem;
+}
+
+main h2 {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.sidebar {
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding-left: 1rem;
+    height: 100dvh;
+    position: sticky;
+    top: 0;
+}
+
+.sidebar h1 {
+    padding: 3rem 4rem 3rem 3rem;
+}
+
+.sidebar a {
+    color: var(--secondary);
+    font-size: 1.1rem;
+}
+
+.sidebar .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.sidebar .sidebar-nav a {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 0 1rem 3rem;
+    transition: background 0.2s, color 0.2s, border-radius 0.2s;
+}
+
+.sidebar .sidebar-nav a.active,
+.sidebar .sidebar-nav a:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border-radius: 100px 0 0 100px;
+}
+
+.sidebar .sidebar-nav a .fas {
+    font-size: 1.25rem;
+}
+
+.sidebar .logout {
+    background-color: var(--secondary);
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    border-radius: 0 3rem 3rem 0;
+    border: 1px solid var(--secondary);
+    border-left: none;
+    transition: background 0.2s, color 0.2s, border-radius 0.2s;
+}
+
+.sidebar .logout:hover {
+    background-color: transparent;
+    border: 1px solid var(--secondary);
+    border-left: none;
+}
+
+.sidebar .logout:hover a {
+    color: var(--secondary);
+}
+
+.sidebar .logout a {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: var(--primary);
+    padding: 1rem 3rem 1rem 1.5rem;
+}
+
+/* DASHBOARD HOME */
+main .main {
+    width: 100%;
+    padding: 4rem 6rem;
+    color: var(--primary);
+}
+
+main .main .heading .heading-body {
+    position: relative;
+    background-color: var(--primary);
+    padding: 5rem 4rem;
+    color: var(--secondary);
+    border-radius: 2rem;
+    margin-top: 1.5rem;
+}
+
+main .main .heading .heading-body h1 {
+    width: 40%;
+}
+
+main .main .heading .heading-body img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+}
+
+main .main .options {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+}
+
+main .main .options .option {
+    width: 50%;
+    height: 23rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
+    position: relative;
+}
+
+main .main .options .option.produk {
+    background: 
+    linear-gradient(to bottom right, rgba(140, 140, 140, 0.3), rgba(140, 140, 140, 0.3)),
+    url('../../assets/img/produk.jpg');
+    background-size: cover;
+}
+
+main .main .options .option.gudang {
+    background: 
+    linear-gradient(to bottom right, rgba(140, 140, 140, 0.3), rgba(140, 140, 140, 0.3)),
+    url('../../assets/img/gudang.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+main .main .options .option a {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: var(--primary);
+    transition: background 0.2s, color 0.2s, border-radius 0.2s;
+}
+
+main .main .options .option a:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+/* DASHBOARD HOME END */
+
+/* DASHBOARD PRODUK */
+main.crud .main .heading .heading-body img {
+    border-bottom-right-radius: inherit;
+    width: 45%;
+}
+
+main.crud .view-data {
+    margin-top: 2rem;
+}
+
+main.crud .search-bar {
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+main.crud .search-bar input {
+    position: relative;
+    padding: 0.75rem 1.5rem;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    width: 35%;
+    font-size: 14px;
+}
+
+main.crud .search-bar button {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    border: none;
+    background: none;
+    color: var(--primary);
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+main.crud .view-data table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    text-align: left;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+main.crud .view-data td,
+main.crud .view-data th {
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+
+main.crud .view-data table thead {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+main.crud .view-data table thead th {
+    padding: 1rem 1.5rem;
+    text-align: center;
+}
+
+main.crud .view-data table tbody tr {
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.2s;
+}
+
+main.crud .view-data table tbody tr:hover {
+    background-color: #e8fcf4;
+}
+
+main.crud .view-data table img {
+    width: 10rem;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+main.crud .view-data table .img-produk {
+    text-align: center;
+}
+
+main.crud .view-data table .aksi {
+    text-align: center;
+}
+
+main.crud .view-data table .aksi .btn {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+/* DASHBOARD PRODUK END */
+
+/* KELOLA PRODUK */
+main.crud section.kelola {
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 2rem 4rem;
+    border-radius: 1.5rem;
+}
+
+main.crud section.kelola hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--secondary);
+    margin: 1rem 0 2rem 0;
+}
+
+main.crud section.kelola .btn-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+main.crud .input-box label,
+main.crud .input-box .input-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+}
+
+main.crud .input-box .drop-area {
+    /* width: 50%; */
+    border: 2px dashed var(--secondary);
+    border-radius: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.125);
+    transition: background 0.2s, border-color 0.2s;
+}
+
+main.crud .input-box .drop-area #img-view {
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    border-radius: inherit;
+}
+
+main.crud .input-box .drop-area:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+main.crud .input-box .drop-area .fas {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+/* KELOLA PRODUK END */
