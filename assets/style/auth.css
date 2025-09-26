@@ -9,6 +9,13 @@ main {
 
 section.left {
     position: relative;
+    height: 95dvh;
+}
+
+section.left .back {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
 }
 
 section.left h1 {
@@ -28,7 +35,7 @@ main.register section.left h1 {
 
 section.left .auth-bg {
     position: relative;
-    height: 95dvh;
+    height: 100%;
 }
 
 section.left .farmer {

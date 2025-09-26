@@ -9,7 +9,8 @@ $explode = explode('/', trim($script_name, '/'));
 $namaFolder2 = $explode[count($explode) - 2];
 ?>
 <aside class="sidebar">
-    <h1>Farm.ing</h1>
+    <!-- <h1>Farm.ing</h1> -->
+    <img src="<?= NM_FOLDER . "/assets/img/logo_main.png" ?>" alt="Logo Farming" class="logo">
     <div class="sidebar-nav">
         <a href="<?= NM_FOLDER . "/dashboard/admin/"; ?>" class="<?= ($namaFolder == 'admin') ? 'active' : ''; ?>">
             <i class="fas fa-house"></i>
@@ -28,10 +29,10 @@ $namaFolder2 = $explode[count($explode) - 2];
             Pengaturan Akun
         </a>
     </div>
-    <div class="logout">
-        <a href="<?= NM_FOLDER . "/auth/logout/" ?>">
-            <i class="fas fa-right-from-bracket fa-rotate-180"></i>
-            Logout
+    <div class="back">
+        <a href="<?= NM_FOLDER . "/" ?>">
+            <i class="fas fa-chevron-left"></i>
+            Kembali
         </a>
     </div>
 </aside>

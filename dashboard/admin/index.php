@@ -8,6 +8,7 @@ require_once '../../includes/session_admin.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farm.ing - Dashboard</title>
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico" type="image/x-icon">
     
     <!-- Global CSS -->
     <link rel="stylesheet" href="../../assets/style/global.css">

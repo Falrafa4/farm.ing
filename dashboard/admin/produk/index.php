@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once '../../../includes/koneksi.php';
+require_once '../../../includes/session_admin.php';
 
 $query_get = 'SELECT produk.*, kategori.nama_kategori as kategori FROM produk JOIN kategori ON produk.id_kategori = kategori.id_kategori';
 $result = $conn->query($query_get);
@@ -16,14 +17,28 @@ if (isset($_GET['delete'])) {
     require_once $_SERVER['DOCUMENT_ROOT'] . NM_FOLDER . '/functions/products.php';
     $id_produk = $_GET['delete'];
     $produk = ambil_produk_by_id($conn, $id_produk);
-
-    if (hapus_produk($conn, $id_produk)) {
-        $_SESSION['pesan'] = [
-            'type' => 'success',
-            'message' => 'Data ' . $produk['nama'] . ' Berhasil Dihapus'
-        ];
+    
+    if ($produk) {
+        $result = hapus_produk($conn, $id_produk);
+        if ($result) {
+            $_SESSION['pesan'] = [
+                'type' => 'success',
+                'message' => 'Data ' . $produk['nama'] . ' Berhasil Dihapus'
+            ];
+        } else {
+            $_SESSION['pesan'] = [
+                'type' => 'error',
+                'message' => 'Terjadi kesalahan saat menghapus data!'
+            ];
+        }
+    } else {
+            $_SESSION['pesan'] = [
+                'type' => 'error',
+                'message' => 'Data dengan ID Produk ' . $id_produk . ' Tidak Ditemukan!'
+            ];
+        }
+        header("Location: ./");
     }
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +46,7 @@ if (isset($_GET['delete'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farm.ing - Dashboard</title>
+    <link rel="shortcut icon" href="../../../assets/img/favicon.ico" type="image/x-icon">
     
     <!-- Global CSS -->
     <link rel="stylesheet" href="../../../assets/style/global.css">
@@ -138,5 +154,6 @@ if (isset($_GET['delete'])) {
         //     })
         // });
     </script>
+    <script src="../../../assets/js/script.js"></script>
 </body>
 </html>

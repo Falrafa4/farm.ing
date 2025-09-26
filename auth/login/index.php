@@ -60,6 +60,7 @@ if (isset($_POST['login'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farm.ing - Login</title>
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico" type="image/x-icon">
 
     <!-- Global CSS -->
     <link rel="stylesheet" href="../../assets/style/global.css">
@@ -132,6 +133,10 @@ if (isset($_POST['login'])) {
             <h1>Selamat Datang Kembali</h1>
             <img src="../../assets/img/auth-bg-2.svg" alt="Background Green" class="auth-bg">
             <img src="../../assets/img/smart-farmer.png" alt="Smart Farmer" class="farmer">
+            <a href="../../" class="btn btn-light back">
+                <i class="fas fa-arrow-left"></i>
+                Kembali
+            </a>
         </section>
 
         <section class="right">
@@ -153,7 +158,6 @@ if (isset($_POST['login'])) {
             </form>
         </section>
     </main>
-    <!-- <script src="../../assets/js/script.js"></script> -->
 </body>
 
 </html>

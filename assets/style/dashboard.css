@@ -25,9 +25,14 @@ main h2 {
     padding: 3rem 4rem 3rem 3rem;
 }
 
+.sidebar .logo {
+    padding: 2rem 3rem 2rem 2rem;
+    width: 20rem;
+}
+
 .sidebar a {
     color: var(--secondary);
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
 }
 
 .sidebar .sidebar-nav {
@@ -56,7 +61,7 @@ main h2 {
     font-size: 1.25rem;
 }
 
-.sidebar .logout {
+.sidebar .back {
     background-color: var(--secondary);
     position: absolute;
     bottom: 10%;
@@ -67,17 +72,17 @@ main h2 {
     transition: background 0.2s, color 0.2s, border-radius 0.2s;
 }
 
-.sidebar .logout:hover {
+.sidebar .back:hover {
     background-color: transparent;
     border: 1px solid var(--secondary);
     border-left: none;
 }
 
-.sidebar .logout:hover a {
+.sidebar .back:hover a {
     color: var(--secondary);
 }
 
-.sidebar .logout a {
+.sidebar .back a {
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -312,3 +317,55 @@ main.crud .input-box .drop-area .fas {
     margin-bottom: 1rem;
 }
 /* KELOLA PRODUK END */
+
+/* PENGATURAN AKUN */
+main.pengaturan .main {
+    padding-top: 2rem;
+}
+
+main.pengaturan .heading .heading-body .profile {
+    position: static;
+    width: auto;
+}
+
+main.pengaturan .heading .heading-body {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 4rem;
+}
+
+main.pengaturan .heading.profil .heading-body {
+    gap: 0.5rem;
+}
+
+main.pengaturan .heading.profil .heading-body {
+    flex-direction: column;
+}
+
+main.pengaturan .heading .heading-body .data-top {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+main.pengaturan .heading .heading-body .data-top .input-box {
+    width: 50%;
+}
+
+main.pengaturan .heading .heading-body .input-box label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+main.pengaturan .heading .heading-body .data-bottom,
+main.pengaturan .heading .heading-body .data-bottom .input-box {
+    width: 100%;
+}
+
+.logout {
+    display: flex;
+    justify-content: flex-end;  
+    margin-top: 1.5rem;
+}
+/* PENGATURAN AKUN END */

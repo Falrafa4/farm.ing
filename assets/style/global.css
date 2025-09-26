@@ -69,6 +69,14 @@ a {
     border: 1px solid var(--secondary);
 }
 
+.input-box textarea {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #999;
+    border-radius: 0.5rem;
+    resize: vertical;
+}
+
 .input-box input, 
 .input-box select {
     padding: 0.75rem 1.5rem;
