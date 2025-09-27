@@ -120,7 +120,7 @@ if (isset($_GET['id'])) {
                             $result_kategori = $conn->query($query_kategori);
                             while ($row_kategori = $result_kategori->fetch_assoc()) {
                             ?>
-                                <option value="<?= $row_kategori['id_kategori']; ?>" <?php $id_kategori == $row_kategori['id_kategori'] ? 'selected' : '' ?>>
+                                <option value="<?= $row_kategori['id_kategori']; ?>" <?= $id_kategori == $row_kategori['id_kategori'] ? 'selected' : '' ?>>
                                     <?= $row_kategori['nama_kategori']; ?>
                                 </option>
                             <?php } ?>

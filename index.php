@@ -21,7 +21,7 @@ session_start();
 </head>
 <body>
     <nav>
-        <h1>Farm.ing</h1>
+        <img src="<?= "assets/img/logo_main_dark.png" ?>" alt="Logo Farming" class="logo">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>

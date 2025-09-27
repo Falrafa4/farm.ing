@@ -88,5 +88,22 @@ function hapus_produk($conn, $id_produk) {
 }
 
 function cari_produk($conn, $keyword) {
-    $query = 'SELECT * FROM produk WHERE nama LIKE %?% OR id_kategori LIKE %?% OR stok LIKE %?% OR harga LIKE %?%';
+    $query = "SELECT produk.*, kategori.nama_kategori AS kategori
+            FROM produk
+            JOIN kategori ON produk.id_kategori = kategori.id_kategori
+            WHERE produk.nama LIKE ? 
+               OR produk.id_kategori LIKE ? 
+               OR produk.stok LIKE ? 
+               OR produk.harga LIKE ?";
+
+    $stmt = $conn->prepare($query);
+
+    $param = "%".$keyword."%";
+    $stmt->bind_param("ssss", $param, $param, $param, $param);
+
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $stmt->close();
+    
+    return $result;
 }

@@ -3,8 +3,22 @@ session_start();
 require_once '../../../includes/koneksi.php';
 require_once '../../../includes/session_admin.php';
 
-$query_get = 'SELECT produk.*, kategori.nama_kategori as kategori FROM produk JOIN kategori ON produk.id_kategori = kategori.id_kategori';
-$result = $conn->query($query_get);
+// $query_get = 'SELECT produk.*, kategori.nama_kategori as kategori FROM produk JOIN kategori ON produk.id_kategori = kategori.id_kategori';
+$query_get = "SELECT produk.*, kategori.nama_kategori AS kategori
+            FROM produk
+            JOIN kategori ON produk.id_kategori = kategori.id_kategori
+            WHERE produk.nama LIKE '%%' 
+               OR produk.id_kategori LIKE '%%' 
+               OR produk.stok LIKE '%%' 
+               OR produk.harga LIKE '%%'";
+
+if (isset($_GET['search'])) {
+    require_once $_SERVER['DOCUMENT_ROOT'] . NM_FOLDER . '/functions/products.php';
+    $keyword = $_GET['search'];
+    $result = cari_produk($conn, $keyword);
+} else {
+    $result = $conn->query($query_get);
+}
 
 // Session message
 $flash_message = null;
@@ -65,8 +79,8 @@ if (isset($_GET['delete'])) {
             <section class="heading">
                 <div class="heading-body">
                     <h1>Data Produk</h1>
-                    <form action="./" method="post" class="search-bar">
-                        <input type="text" name="search_keyword" id="search_keyword" placeholder="Cari Produk...">
+                    <form action="./" method="get" class="search-bar">
+                        <input type="text" name="search" id="search" placeholder="Cari Produk...">
                         <button type="submit">
                             <i class="fas fa-search"></i>
                         </button>
@@ -86,8 +100,14 @@ if (isset($_GET['delete'])) {
             <?php } ?>
 
             <!-- <section class="confirm" id="popup-confirm">
-                <p>Apakah Anda yakin ingin menghapus data ini?</p>
-                <button id></button>
+                <div class="main">
+                    <p>Apakah Anda yakin ingin menghapus data ini?</p>
+                    <div class="button-group">
+                        <button class="btn btn-dark" id="yes">Ya</button>
+                        <button class="btn btn-light" id="no">Tidak</button>
+                    </div>
+                </div>
+                <div class="darkness"></div>
             </section> -->
 
             <section class="view-data">

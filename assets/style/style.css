@@ -1,6 +1,12 @@
 /* STYLE FOR LANDING PAGE */
 
 /* NAVBAR */
+img {
+    /* padding: 2rem 3rem 2rem 2rem; */
+    /* width: 15rem; */
+    height: 90%;
+}
+
 nav {
    display: flex; 
    justify-content: space-between;

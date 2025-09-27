@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 26, 2025 at 01:06 AM
+-- Generation Time: Sep 27, 2025 at 03:46 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -77,7 +77,9 @@ INSERT INTO `produk` (`id_produk`, `nama`, `id_kategori`, `stok`, `harga`, `gamb
 (1, 'Tomat', 1, 100, 15000, 'tomat.jpg'),
 (2, 'Nanas', 1, 25, 10000, '1758546345.jpg'),
 (3, 'Kacang Panjang', 1, 100, 1000, '1758518744.jpg'),
-(5, 'Cabai', 1, 120, 13000, '1758588880.jpg');
+(4, 'Wortel', 1, 200, 10000, '1758895166.jpg'),
+(5, 'Strawberry', 2, 1000, 20000, '1758976527.jpg'),
+(6, 'Salak', 2, 20, 5000, '1758976638.jpg');
 
 -- --------------------------------------------------------
 
@@ -151,7 +153,7 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user`
