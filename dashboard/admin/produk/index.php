@@ -33,7 +33,7 @@ if (isset($_GET['delete'])) {
     $produk = ambil_produk_by_id($conn, $id_produk);
     
     if ($produk) {
-        $result = hapus_produk($conn, $id_produk);
+        $result = hapus_produk($conn, $id_produk, $produk['gambar']);
         if ($result) {
             $_SESSION['pesan'] = [
                 'type' => 'success',
@@ -99,7 +99,7 @@ if (isset($_GET['delete'])) {
             </section>
             <?php } ?>
 
-            <!-- <section class="confirm" id="popup-confirm">
+            <section class="confirm" id="confirm">
                 <div class="main">
                     <p>Apakah Anda yakin ingin menghapus data ini?</p>
                     <div class="button-group">
@@ -107,8 +107,8 @@ if (isset($_GET['delete'])) {
                         <button class="btn btn-light" id="no">Tidak</button>
                     </div>
                 </div>
-                <div class="darkness"></div>
-            </section> -->
+                <div class="darkness" id="confirm-bg"></div>
+            </section>
 
             <section class="view-data">
                 <a href="kelola/" class="btn btn-crud-dark">
@@ -147,9 +147,9 @@ if (isset($_GET['delete'])) {
                                 <a href="kelola/?id=<?= $row['id_produk'] ?>" class="btn btn-crud-dark">
                                     <i class="fas fa-edit"></i>
                                 </a>
-                                <a href="?delete=<?= $row['id_produk'] ?>" data-id="<?= $row['id_produk'] ?>" class="btn btn-crud-dark crud-delete" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                                <button href="?delete=<?= $row['id_produk'] ?>" data-id="<?= $row['id_produk'] ?>" class="btn btn-crud-dark crud-delete" onclick="//return confirm('Apakah Anda yakin ingin menghapus data ini?')">
                                     <i class="fas fa-trash"></i>
-                                </a>
+                                </button>
                             </td>
                         </tr>
                         <?php }
@@ -164,15 +164,7 @@ if (isset($_GET['delete'])) {
     </main>
     <script>
         // Confirm delete
-        // const deleteBtn = document.querySelectorAll('.crud-delete');
-        // deleteBtn.forEach(button => {
-        //     button.addEventListener('click', function(e) {
-        //         e.preventDefault();
-
-        //         const id = this.dataset.id;
-        //         console.log(id);
-        //     })
-        // });
+        
     </script>
     <script src="../../../assets/js/script.js"></script>
 </body>

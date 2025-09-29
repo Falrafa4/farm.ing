@@ -77,12 +77,14 @@ function update_produk($conn, $id_produk, $nama, $id_kategori, $harga, $stok, $f
     return $result;
 }
 
-function hapus_produk($conn, $id_produk) {
+function hapus_produk($conn, $id_produk, $nama_gambar) {
     $query = 'DELETE FROM produk WHERE id_produk = ?';
     $stmt = $conn->prepare($query);
     $stmt->bind_param('i', $id_produk);
     $result = $stmt->execute();
     $stmt->close();
+
+    unlink($_SERVER['DOCUMENT_ROOT'] . NM_FOLDER . '/uploads/' . $nama_gambar);
 
     return $result;
 }

@@ -1,6 +1,6 @@
 <?php 
 session_start();
-
+require_once "includes/koneksi.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,12 +9,12 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farm.ing</title>
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/style/style.css">
 
     <!-- Global CSS -->
     <link rel="stylesheet" href="assets/style/global.css">
-
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="assets/style/style.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
@@ -42,6 +42,25 @@ session_start();
             </div>
             <?php endif; ?>
         </ul>
+
+        <div class="toggle-sidebar" id="toggle-sidebar">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="toggle-link" id="toggle-link">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <?php
+            if (isset($_SESSION['user'])):
+            ?>
+                <!-- <a href=""><?= $_SESSION['user']['nama'] ?></a> -->
+                <a href="dashboard/<?= $_SESSION['user']['role'] == 'Admin' ? 'admin/' : '' ?>" role="button">Dashboard</a></li>
+                <a href="dashboard/<?= $_SESSION['user']['role'] == 'Admin' ? 'admin/pengaturan/' : 'pengaturan/' ?>" role="button">Akun Saya</a>
+            <?php else: ?>
+                <a href="auth/login/">Login</a>
+                <a href="auth/register/">Register</a>
+            <?php endif; ?>
+        </div>
     </nav>
 
     <header>
@@ -117,5 +136,6 @@ session_start();
             <p>© 2025 Farm.ing. All rights reserved.</p>
         </div>
     </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

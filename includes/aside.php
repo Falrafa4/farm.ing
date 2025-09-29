@@ -14,25 +14,25 @@ $namaFolder2 = $explode[count($explode) - 2];
     <div class="sidebar-nav">
         <a href="<?= NM_FOLDER . "/dashboard/admin/"; ?>" class="<?= ($namaFolder == 'admin') ? 'active' : ''; ?>">
             <i class="fas fa-house"></i>
-            Dashboard
+            <span>Dashboard</span>
         </a>
         <a href="<?= NM_FOLDER . "/dashboard/admin/produk"; ?>" class="<?= ($namaFolder == 'produk' || $namaFolder2 == 'produk') ? 'active' : ''; ?>">
             <i class="fas fa-box"></i>
-            Data Produk
+            <span>Data Produk</span>
         </a>
         <a href="<?= NM_FOLDER . "/dashboard/admin/gudang"; ?>" class="<?= ($namaFolder == 'gudang' || $namaFolder2 == 'gudang') ? 'active' : ''; ?>">
             <i class="fas fa-shop"></i>
-            Data Gudang
+            <span>Data Gudang</span>
         </a>
         <a href="<?= NM_FOLDER . "/dashboard/admin/pengaturan"; ?>" class="<?= ($namaFolder == 'pengaturan' || $namaFolder2 == 'pengaturan') ? 'active' : ''; ?>">
             <i class="fas fa-user"></i>
-            Pengaturan Akun
+            <span>Pengaturan Akun</span>
         </a>
     </div>
     <div class="back">
         <a href="<?= NM_FOLDER . "/" ?>">
             <i class="fas fa-chevron-left"></i>
-            Kembali
+            <span>Kembali</span>
         </a>
     </div>
 </aside>
