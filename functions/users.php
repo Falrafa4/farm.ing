@@ -22,9 +22,8 @@ function tambah_user($conn, $nama, $email, $password, $no_telp, $alamat) {
     $query = 'INSERT INTO user (nama, email, password, no_telp, alamat) VALUES (?, ?, ?, ?, ?)';
     $stmt = $conn->prepare($query);
     $stmt->bind_param('sssss', $nama, $email, $hashed_password, $no_telp, $alamat);
-    $stmt->execute();
 
-    $result = $stmt->get_result();
+    $result = $stmt->execute();
     $stmt->close();
     return $result;
 }

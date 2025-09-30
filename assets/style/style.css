@@ -327,6 +327,7 @@ footer .footer-bottom {
     .hero {
         padding: 0 2rem;
         height: 100dvh;
+        background-position: -75%;
     }
 
     .hero .hero-title {

@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once '../../../../includes/koneksi.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . NM_FOLDER . '/includes/session_admin.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . NM_FOLDER . '/includes/admin/session_admin.php';
 
 $id_produk = '';
 $nama = '';
@@ -97,7 +97,7 @@ if (isset($_GET['id'])) {
 
 <body>
     <main class="crud produk">
-        <?php require_once '../../../../includes/aside.php'; ?>
+        <?php require_once '../../../../includes/admin/aside.php'; ?>
 
         <div class="main">
             <section class="kelola">

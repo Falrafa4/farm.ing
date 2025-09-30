@@ -1,5 +1,6 @@
 <?php
 require_once '../../../includes/koneksi.php'; 
+require_once '../../../includes/admin/session_admin.php';
 session_start();
 ?>
 <!DOCTYPE html>
@@ -21,7 +22,7 @@ session_start();
 </head>
 <body>
     <main class="pengaturan">
-        <?php require_once '../../../includes/aside.php'; ?>
+        <?php require_once '../../../includes/admin/aside.php'; ?>
 
         <div class="main">
             <section class="heading">

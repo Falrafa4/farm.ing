@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once '../../../includes/koneksi.php';
-require_once '../../../includes/session_admin.php';
+require_once '../../../includes/admin/session_admin.php';
 
 // $query_get = 'SELECT produk.*, kategori.nama_kategori as kategori FROM produk JOIN kategori ON produk.id_kategori = kategori.id_kategori';
 $query_get = "SELECT produk.*, kategori.nama_kategori AS kategori
@@ -73,7 +73,7 @@ if (isset($_GET['delete'])) {
 </head>
 <body>
     <main class="crud produk">
-        <?php require_once '../../../includes/aside.php'; ?>
+        <?php require_once '../../../includes/admin/aside.php'; ?>
 
         <div class="main">
             <section class="heading">

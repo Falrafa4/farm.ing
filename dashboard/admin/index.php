@@ -1,6 +1,6 @@
 <?php
 require_once '../../includes/koneksi.php'; 
-require_once '../../includes/session_admin.php';
+require_once '../../includes/admin/session_admin.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +21,7 @@ require_once '../../includes/session_admin.php';
 </head>
 <body>
     <main class="home">
-        <?php require_once '../../includes/aside.php'; ?>
+        <?php require_once '../../includes/admin/aside.php'; ?>
 
         <div class="main">
             <section class="heading">

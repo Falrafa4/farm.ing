@@ -445,10 +445,24 @@ main.pengaturan .heading .heading-body .data-bottom .input-box {
     main .main .heading .heading-body {
         padding: 3rem 2rem;
         border-radius: 1rem;
+        overflow: hidden;
+    }
+
+    main .main .heading .heading-body img {
+        right: -10%;
+        width: 50%;
     }
 
     main .main .heading h1 {
         line-height: 120%;
+    }
+
+    main .main .options {
+        flex-direction: column;
+    }
+
+    main .main .options .option {
+        width: 100%;
     }
 
     main.crud .view-data {
@@ -466,6 +480,14 @@ main.pengaturan .heading .heading-body .data-bottom .input-box {
 
     main.crud .view-data table img {
         width: 5rem;
+    }
+
+    main.crud section.kelola {
+        padding: 2rem;
+    }
+
+    main.crud section.kelola .btn-group {
+        flex-direction: column;
     }
 
     main.pengaturan .heading .heading-body,

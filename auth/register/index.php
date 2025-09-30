@@ -11,6 +11,7 @@ if (isset($_SESSION['user'])) {
     }
 }
 
+$old_input = null;
 // Handle proses register
 if (isset($_POST['daftar'])) {
     require_once $_SERVER['DOCUMENT_ROOT'] . NM_FOLDER . '/functions/users.php';
@@ -32,11 +33,21 @@ if (isset($_POST['daftar'])) {
                 'type' => 'error',
                 'message' => 'Terjadi kesalahan saat mendaftarkan akun! Silahkan coba lagi :('
             ];
+            $old_input = [
+                'nama' => $nama,
+                'no_hp' => $no_hp,
+                'alamat' => $alamat,
+            ];
         }
     } else {
         $_SESSION['pesan'] = [
             'type' => 'error',
             'message' => 'Email yang Anda masukkan telah terdaftar di Farm.ing. Silahkan login.'
+        ];
+        $old_input = [
+            'nama' => $nama,
+            'no_hp' => $no_hp,
+            'alamat' => $alamat,
         ];
     }
 }
@@ -92,13 +103,13 @@ if (isset($_SESSION['pesan'])) {
             <h1>Daftar</h1>
             <form action="./" class="register" method="post">
                 <div class="input-box">
-                    <input type="text" name="nama" id="nama" placeholder="Nama Lengkap" required>
+                    <input type="text" name="nama" id="nama" placeholder="Nama Lengkap" value="<?= $old_input['nama'] ?? '' ?>" required>
                 </div>
                 <div class="input-box"> 
-                    <input type="tel" name="no_hp" id="no_hp" placeholder="No. HP" pattern="08\d{9,11}" minlength="9" maxlength="12" inputmode="numeric" title="Masukkan nomor yang dimulai 08 dan panjang 9–11 digit, tanpa spasi/tanda." required>
+                    <input type="tel" name="no_hp" id="no_hp" placeholder="No. HP" pattern="08\d{9,11}" minlength="9" maxlength="12" inputmode="numeric" title="Masukkan nomor yang dimulai 08 dan panjang 9–11 digit, tanpa spasi/tanda." value="<?= $old_input['no_hp'] ?? '' ?>" required>
                 </div>
                 <div class="input-box">
-                    <input type="text" name="alamat" id="alamat" placeholder="Alamat Lengkap" required>
+                    <input type="text" name="alamat" id="alamat" placeholder="Alamat Lengkap" value="<?= $old_input['alamat'] ?? '' ?>" required>
                 </div>
                 <div class="input-box">
                     <input type="email" name="email" id="email" placeholder="Email" required>

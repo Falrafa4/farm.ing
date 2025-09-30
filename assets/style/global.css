@@ -208,7 +208,8 @@ a {
         line-height: 150%;
     }
 
-    a.btn {
+    a.btn,
+    button.btn {
         font-size: 0.9rem;
         padding: 0.75rem 2rem;
     }
