@@ -31,7 +31,8 @@ $namaFolder2 = $explode[count($explode) - 2];
     </div>
     <div class="back">
         <a href="<?= NM_FOLDER . "/" ?>">
-            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-chevron-left icon-desktop"></i>
+            <i class="fas fa-reply icon-hp"></i>
             <span>Kembali</span>
         </a>
     </div>

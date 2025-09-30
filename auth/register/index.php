@@ -71,6 +71,7 @@ if (isset($_SESSION['pesan'])) {
             <h1>Selamat Datang</h1>
             <img src="../../assets/img/auth-bg-2.svg" alt="Background Green" class="auth-bg">
             <img src="../../assets/img/smart-farmer.png" alt="Smart Farmer" class="farmer">
+            <div class="auth-bg-hp"></div>
             <a href="../../" class="btn btn-light back">
                 <i class="fas fa-arrow-left"></i>
                 Kembali

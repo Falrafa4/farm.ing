@@ -24,8 +24,8 @@ require_once "includes/koneksi.php";
         <img src="<?= "assets/img/logo_main_dark.png" ?>" alt="Logo Farming" class="logo">
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#about">About</a></li>
             <?php if(isset($_SESSION['user'])): ?>
             <div class="user-login">
                 <i class="fas fa-user-circle fa-xl"></i>
@@ -48,8 +48,8 @@ require_once "includes/koneksi.php";
         </div>
         <div class="toggle-link" id="toggle-link">
             <a href="#">Home</a>
-            <a href="#">Services</a>
-            <a href="#">About</a>
+            <a href="#product">Product</a>
+            <a href="#about">About</a>
             <?php
             if (isset($_SESSION['user'])):
             ?>
@@ -84,26 +84,26 @@ require_once "includes/koneksi.php";
             </div>
         </section>
 
-        <section class="produk">
+        <section class="produk" id="product">
             <h1>Produk Kami</h1>
             <div class="card-container">
                 <div class="card">
                     <img src="assets/img/sayur.png" alt="Sayur">
-                    <p>Sayur</p>
+                    <a href="dashboard/admin/produk/?search='Sayur'">Sayur</a>
                 </div>
                 <div class="card">
                     <img src="assets/img/buah.png" alt="Buah">
-                    <p>Buah</p>
+                    <a href="dashboard/admin/produk/?search='Buah'">Buah</a>
                 </div>
                 <div class="card">
                     <img src="assets/img/alat_tani.png" alt="Alat Tani">
-                    <p>Alat Tani</p>
+                    <a href="dashboard/admin/produk/?search='Alat Tani'">Alat Tani</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer id="about">
         <div class="footer-top">
             <div class="footer-left">
                 <h1>Farm.ing</h1>

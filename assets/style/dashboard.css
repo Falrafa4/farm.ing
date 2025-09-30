@@ -90,6 +90,14 @@ main h2 {
     padding: 1rem 3rem 1rem 1.5rem;
 }
 
+.sidebar .icon-desktop {
+    display: block;
+}
+
+.sidebar .icon-hp {
+    display: none;
+}
+
 /* DASHBOARD HOME */
 main .main {
     width: 100%;
@@ -376,7 +384,8 @@ main.pengaturan .heading .heading-body .data-bottom .input-box {
 
 /* RESPONSIVE DASHBOARD */
 @media only screen and (max-width: 600px) {
-    html, body {
+    html,
+    body {
         margin: 0;
         padding: 0;
     }
@@ -384,7 +393,7 @@ main.pengaturan .heading .heading-body .data-bottom .input-box {
     .sidebar {
         /* width: 100%; */
         padding: 0;
-        position: fixed;
+        position: fixed !important;
         top: 0;
         left: 0;
         margin: 0;
@@ -395,8 +404,8 @@ main.pengaturan .heading .heading-body .data-bottom .input-box {
         transform: translate3d(0, 0, 0); */
     }
 
-    .sidebar .sidebar-nav a {
-        padding: 1rem;
+    .sidebar a {
+        padding: 1rem !important;
     }
 
     .sidebar .sidebar-nav a.active,
@@ -412,11 +421,64 @@ main.pengaturan .heading .heading-body .data-bottom .input-box {
         display: none;
     }
 
+    .sidebar .back {
+        position: static;
+        border-radius: 0;
+        margin-top: 18rem;
+    }
+
+    .sidebar .icon-desktop {
+        display: none;
+    }
+
+    .sidebar .icon-hp {
+        display: block;
+    }
+
     main .main {
         padding-left: 20%;
         padding-right: 5%;
         padding-top: 10%;
         padding-bottom: 10%;
+    }
+
+    main .main .heading .heading-body {
+        padding: 3rem 2rem;
+        border-radius: 1rem;
+    }
+
+    main .main .heading h1 {
+        line-height: 120%;
+    }
+
+    main.crud .view-data {
+        overflow: scroll;
+    }
+
+    main.crud .search-bar input {
+        width: 70%;
+    }
+
+    main.crud .search-bar button {
+        right: 35%;
+        left: auto;
+    }
+
+    main.crud .view-data table img {
+        width: 5rem;
+    }
+
+    main.pengaturan .heading .heading-body,
+    main.pengaturan .data-top {
+        flex-direction: column;
+    }
+
+    main.pengaturan .data-top .input-box {
+        width: 100% !important;
+    }
+
+    .profile-info {
+        text-align: center;
     }
 
     .under-construction {

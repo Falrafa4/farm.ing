@@ -132,6 +132,7 @@ if (isset($_POST['login'])) {
         <section class="left">
             <h1>Selamat Datang Kembali</h1>
             <img src="../../assets/img/auth-bg-2.svg" alt="Background Green" class="auth-bg">
+            <div class="auth-bg-hp">
             <img src="../../assets/img/smart-farmer.png" alt="Smart Farmer" class="farmer">
             <a href="../../" class="btn btn-light back">
                 <i class="fas fa-arrow-left"></i>

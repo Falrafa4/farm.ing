@@ -243,9 +243,10 @@ section.produk .card-container .card img {
     height: 100%;
 }
 
-section.produk .card-container .card p {
+section.produk .card-container .card a {
     background-color: var(--secondary);
     color: var(--primary);
+    border: 1px solid var(--secondary);
     border-radius: 10px;
     position: absolute;
     bottom: 22px;
@@ -257,6 +258,14 @@ section.produk .card-container .card p {
     width: 90%;
     padding: 0.75rem 0;
     z-index: 2;
+    transition: .3s var(--default-transition);
+}
+
+section.produk .card-container .card a:hover {
+    background-color: transparent;
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    border: 1px solid var(--secondary);
 }
 /* PRODUK END */
 
@@ -316,8 +325,12 @@ footer .footer-bottom {
     }
 
     .hero {
-        padding: 0 3rem;
+        padding: 0 2rem;
         height: 100dvh;
+    }
+
+    .hero .hero-title {
+        font-size: 2.5rem !important;
     }
 
     nav {

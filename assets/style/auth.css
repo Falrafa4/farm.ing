@@ -82,3 +82,45 @@ section.right form {
 .link-group a:hover {
     text-decoration: underline;
 }
+
+@media only screen and (max-width: 600px) {
+    main {
+        margin: 0;
+        display: block;
+    }
+
+    section.left {
+        height: 40dvh;
+        overflow: hidden;
+    }
+
+    section.left h1 {
+        left: 2rem;
+    }
+
+    section.right{
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .auth-bg {
+        display: none;
+    }
+
+    .auth-bg-hp {
+        display: block;
+        width: 100dvw;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: var(--primary);
+        border-radius: 0 0 2rem 2rem;
+    }
+
+    section.left .farmer {
+        width: 60%;
+        right: -2rem;
+        z-index: 2;
+    }
+}
