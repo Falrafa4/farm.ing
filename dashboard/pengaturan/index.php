@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once '../../../includes/koneksi.php'; 
-require_once '../../../includes/admin/session_admin.php';
+require_once '../../includes/koneksi.php'; 
+require_once '../../includes/user/session_user.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,26 +9,26 @@ require_once '../../../includes/admin/session_admin.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farm.ing - Dashboard</title>
-    <link rel="shortcut icon" href="../../../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico" type="image/x-icon">
     
     <!-- Global CSS -->
-    <link rel="stylesheet" href="../../../assets/style/global.css">
+    <link rel="stylesheet" href="../../assets/style/global.css">
 
     <!-- Dashboard CSS -->
-    <link rel="stylesheet" href="../../../assets/style/dashboard.css">
+    <link rel="stylesheet" href="../../assets/style/dashboard.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
     <main class="pengaturan">
-        <?php require_once '../../../includes/admin/aside.php'; ?>
+        <?php require_once '../../includes/user/aside.php'; ?>
 
         <div class="main">
             <section class="heading">
                 <h1 class="heading-head">Profil Anda</h1>
                 <div class="heading-body">
-                    <img src="../../../assets/img/profile.png" class="profile" alt="Blank Profile">
+                    <img src="../../assets/img/profile.png" class="profile" alt="Blank Profile">
                     <div class="profile-info">
                         <h2><?= $_SESSION['user']['nama'] ?></h2>
                         <p>&ndash; <?= $_SESSION['user']['role'] ?></p>
@@ -56,7 +56,7 @@ require_once '../../../includes/admin/session_admin.php';
                 </div>
             </section>
             <div class="logout">
-                <a href="../../../auth/logout/" class="btn btn-crud-dark logout-button">
+                <a href="../../auth/logout/" class="btn btn-crud-dark logout-button">
                     Logout
                     <i class="fas fa-right-from-bracket"></i>
                 </a>

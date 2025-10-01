@@ -15,7 +15,8 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: 'Nunito Sans', Arial, sans-serif;
-}
+    scroll-margin-top: 5rem;
+}                                           
 
 body {
     background-color: var(--secondary);

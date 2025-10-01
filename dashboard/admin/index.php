@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../../includes/koneksi.php'; 
 require_once '../../includes/admin/session_admin.php';
 ?>

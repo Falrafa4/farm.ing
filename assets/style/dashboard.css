@@ -422,9 +422,11 @@ main.pengaturan .heading .heading-body .data-bottom .input-box {
     }
 
     .sidebar .back {
-        position: static;
+        position: absolute;
         border-radius: 0;
         margin-top: 18rem;
+        bottom: 3rem;
+        right: 0;
     }
 
     .sidebar .icon-desktop {

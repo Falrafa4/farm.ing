@@ -1,6 +1,7 @@
 <?php
+session_start();
 require_once '../includes/koneksi.php'; 
-require_once '../includes/session_user.php';
+require_once '../includes/user/session_user.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +19,12 @@ require_once '../includes/session_user.php';
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <style>
+        main .main .heading .heading-body h1 {
+            width: 65%;
+        }
+    </style>
 </head>
 <body>
     <main class="home">
@@ -27,7 +34,7 @@ require_once '../includes/session_user.php';
             <section class="heading">
                 <h1 class="heading-head">Dashboard</h1>
                 <div class="heading-body">
-                    <h1>Welcome, Smart Farmer!</h1>
+                    <h1>Welcome,<br> <?= $_SESSION['user']['nama'] ?></h1>
                     <!-- <p><?= $_SESSION['user']['nama'] ?></p> -->
                     <img src="../assets/img/smart-farmer.png" alt="">
                 </div>
