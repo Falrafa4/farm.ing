@@ -53,6 +53,10 @@ require_once '../../includes/user/session_user.php';
                             <textarea name="alamat" id="alamat" readonly><?= $_SESSION['user']['alamat'] ?></textarea>
                         </div>
                     </div>
+                    <a href="#" class="btn btn-light">
+                        <i class="fas fa-pen-to-square"></i>
+                        Edit
+                    </a>
                 </div>
             </section>
             <div class="logout">

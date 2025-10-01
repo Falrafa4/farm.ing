@@ -24,6 +24,33 @@ require_once '../includes/user/session_user.php';
         main .main .heading .heading-body h1 {
             width: 65%;
         }
+
+        .under-construction {
+            margin: 3rem auto;
+            padding: 2rem 2rem 2.5rem 2rem;
+            max-width: 100%;
+            background: #f3fffa;
+            border: 2px dashed #265548;
+            border-radius: 24px;
+            text-align: center;
+        }
+
+        .under-construction i {
+            font-size: 3rem;
+            color: #265548;
+            margin-bottom: 1rem;
+        }
+
+        .under-construction h2 {
+            margin: 0.5rem 0 1rem 0;
+            color: #265548;
+            font-size: 1.5rem;
+        }
+
+        .under-construction p {
+            color: #265548;
+            font-size: 1.1rem;
+        }
     </style>
 </head>
 <body>
@@ -38,9 +65,55 @@ require_once '../includes/user/session_user.php';
                     <!-- <p><?= $_SESSION['user']['nama'] ?></p> -->
                     <img src="../assets/img/smart-farmer.png" alt="">
                 </div>
+            </section>            
+            <section class="heading">
+                <!-- <h1 class="heading-head">Informasi</h1> -->
+                <div class="heading-body">
+                    <h2>Total Pesanan</h2>
+                    <!-- <p><?= $_SESSION['user']['nama'] ?></p> -->
+                    <!-- <img src="../assets/img/smart-farmer.png" alt=""> -->
+                    <div class="informasi-pesanan">
+                        <div class="card sayur">
+                            <h3>Sayur</h3>
+                            <p>
+                                <em>Belum ada pesanan</em>
+                            </p>
+                        </div>
+                        <div class="card buah">
+                            <h3>Buah</h3>
+                            <p>
+                                <em>Belum ada pesanan</em>
+                            </p>
+                        </div>
+                        <div class="card alat-tani">
+                            <h3>Alat Tani</h3>
+                            <p>
+                                <em>Belum ada pesanan</em>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="riwayat-pesanan">
+                        <h2>Riwayat Pesanan</h2>
+                        <div class="list-riwayat">
+                            <p><em>Belum ada riwayat pesanan</em></p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-light">
+                        <i class="fas fa-plus"></i>
+                        Buat Pesanan
+                    </a>
+                </div>
             </section>
 
             
+            <!-- Pages Under Construction -->
+            <section class="under-construction">
+                <i class="fas fa-tools"></i>
+                <h2>Dashboard User Sedang Dalam Pengembangan</h2>
+                <p>Maaf, dashboard user sedang dalam proses pembangunan.<br>Doakan kami lolos ke babak final.</p>
+                <br>
+                <em>- Hmm.dev -</em>
+            </section>
         </div>
     </main>
 </body>

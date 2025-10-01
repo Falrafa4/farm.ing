@@ -122,7 +122,7 @@ if (isset($_POST['login'])) {
                                 <?php } else { ?>
                                     window.location.href = "<?= NM_FOLDER ?>/dashboard/";
                                 <?php } ?>
-                            }, 2000);
+                            }, 1500);
                         <?php endif; ?>
                     }
                 </script>

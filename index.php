@@ -89,15 +89,15 @@ require_once "includes/koneksi.php";
             <div class="card-container">
                 <div class="card">
                     <img src="assets/img/sayur.png" alt="Sayur">
-                    <a href="dashboard/admin/produk/?search='Sayur'">Sayur</a>
+                    <a href="<?= $_SESSION['user']['role'] == 'Admin' ? 'dashboard/admin/produk/?search=\'Sayur\'' : 'dashboard/' ?>">Sayur</a>
                 </div>
                 <div class="card">
                     <img src="assets/img/buah.png" alt="Buah">
-                    <a href="dashboard/admin/produk/?search='Buah'">Buah</a>
+                    <a href="<?= $_SESSION['user']['role'] == 'Admin' ? 'dashboard/admin/produk/?search=\'Buah\'' : 'dashboard/' ?>">Buah</a>
                 </div>
                 <div class="card">
                     <img src="assets/img/alat_tani.png" alt="Alat Tani">
-                    <a href="dashboard/admin/produk/?search='Alat Tani'">Alat Tani</a>
+                    <a href="<?= $_SESSION['user']['role'] == 'Admin' ? 'dashboard/admin/produk/?search=\'Alat Tani\'' : 'dashboard/' ?>">Alat Tani</a>
                 </div>
             </div>
         </section>

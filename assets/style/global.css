@@ -65,7 +65,7 @@ a {
 }
 
 .btn-light:hover {
-    background-color: var(--primary);
+    background-color: transparent;
     color: var(--secondary);
     border: 1px solid var(--secondary);
 }
@@ -76,6 +76,7 @@ a {
     border: 1px solid #999;
     border-radius: 0.5rem;
     resize: vertical;
+    background-color: var(--secondary);
 }
 
 .input-box input, 
@@ -87,6 +88,7 @@ a {
     margin-bottom: 1.5rem;
     width: 100%;
     font-size: 14px;
+    background-color: var(--secondary);
 }
 
 .input-box input:valid {

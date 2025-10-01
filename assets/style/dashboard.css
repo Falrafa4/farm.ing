@@ -173,10 +173,50 @@ main .main .options .option a {
 main .main .options .option a:hover {
     background-color: rgba(255, 255, 255, 0.8);
 }
-
 /* DASHBOARD HOME END */
 
-/* DASHBOARD PRODUK */
+/* DASHBOARD USER HOME */
+main .main .heading .heading-body .informasi-pesanan {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+main .main .heading .heading-body h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+main .main .heading .heading-body .informasi-pesanan .card {
+    background-color: rgba(255, 255, 255, 0.125);
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    /* text-align: center; */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+main .main .heading .heading-body .riwayat-pesanan {
+    background-color: rgba(255, 255, 255, 0.125);
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+main .main .heading .heading-body .riwayat-pesanan .list-riwayat {
+    margin-top: 1rem;
+}
+
+main .main .heading .heading-body a.btn {
+    margin-top: 1rem;
+    cursor: not-allowed;
+}
+
+/* DASHBOARD USER HOME END */
+
+/* DASHBOARD CRUD */
 main.crud .main .heading .heading-body img {
     border-bottom-right-radius: inherit;
     width: 45%;
@@ -269,7 +309,7 @@ main.crud .view-data table .aksi .btn {
     margin-bottom: 0.5rem;
 }
 
-/* DASHBOARD PRODUK END */
+/* DASHBOARD CRUD END */
 
 /* KELOLA PRODUK */
 main.crud section.kelola {
@@ -450,9 +490,18 @@ main.pengaturan .heading .heading-body .data-bottom .input-box {
         overflow: hidden;
     }
 
+    main .main .heading .heading-body h1 {
+        font-size: 1.5rem !important;
+    }
+
     main .main .heading .heading-body img {
         right: -10%;
         width: 50%;
+    }
+
+    main .main .heading .heading-body .informasi-pesanan {
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
     main .main .heading h1 {
